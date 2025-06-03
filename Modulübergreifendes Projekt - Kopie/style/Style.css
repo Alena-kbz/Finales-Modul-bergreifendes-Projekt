@@ -1,0 +1,511 @@
+* { /*Allgemeine definitionen zur Website*/
+    margin: 0;
+    font-family: 'Karmina sans', sans-serif;
+    background-color: #f4f2ee; 
+    color: #293056;
+  }
+
+  
+ h1{ /*Titel (Galerie, Zeitplan,..)*/
+  font-family: corbel;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #00709c;
+  font-size: 3em;
+}
+
+
+p:not( .footer-box p, nav), ul, ol, b{ /*Schriftgrösse für Text (p) ausser Footer und nav*/
+  font-size: 1.3em;
+}
+
+
+ 
+
+/*header*/
+.header {
+  display: flex;
+  justify-content: space-between; /*Anordnung mit Platz um Elemente im header*/
+  align-items: center;
+  padding: 20px 20px;
+  flex-wrap: wrap;
+  background-color:#b5a7cf;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color:transparent;
+}
+
+.blau{
+  color:#00709c; /*Buchtabe o im Titel*/
+  background-color:transparent;
+}
+
+.logo {
+  height: 40px;
+  background-color:#b5a7cf;
+  display: block;
+}
+
+.title { /*Titel Blau im Fokus*/
+  font-family: Corbel;
+  font-size: 2em;
+  font-weight: bold;
+  color:#f4f2ee;
+  margin: 0;
+  position: relative;
+  left: 20px; /*Abstand Titel von Logo*/
+  background-color: transparent;
+}
+
+/* Navigation */
+.nav{
+  background-color: #b5a7cf;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #b5a7cf;
+}
+
+.nav ul li{
+  background-color: #b5a7cf;
+  font-size: 0.8em; /*Schriftgrösse der Verlinkungen*/
+}
+
+.nav ul li a{
+  color:#293056;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 4px; 
+  transition: all 0.3s ease;
+  background-color: #b5a7cf;
+}
+
+#aktuell{ /*Aktuelle Seite soll weiss sein*/
+  color: #f4f2ee;
+}
+
+.nav ul li a:hover { /*wenn Maus drüber geht*/
+  color:#f4f2ee;
+
+}
+
+/* Burgermenü */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer; /*Cursor wird zu Hand, da Link*/
+  margin-left: auto;
+  background-color:#b5a7cf;
+}
+
+.burger span { /*Linien des Burgers, drei Striche*/
+  height: 3px;
+  background: #00709c;
+  width: 100%;
+}
+
+/* Versteckte Checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* Responsiv Navigation */
+@media (max-width: 600px) {
+    /* Navigation zunächst einklappen */
+    .nav ul {
+      flex-direction: column;
+      width: 100%;
+      
+      padding: 0 10px;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+      background-color:#b5a7cf;
+    }
+  
+    .nav a {
+      color: #f4f2ee;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+    }
+
+    /*Navigation ausklappen */
+    .nav-toggle:checked ~ .nav ul {
+      max-height: 500px; /* groß genug für alle Links */
+      padding: 10px;
+    }
+  
+    /* Burger anzeigen */
+    .burger {
+      display: flex;
+    }
+  
+    .header {
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  
+    .nav {
+      width: 100%;
+    }
+  }
+  
+ 
+
+  
+ /*Fotogalerie*/
+ .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 5 Spalten */
+    gap: 50px; /* Abstand zwischen den Bildern */
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Container für jedes Bild */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Das Foto selbst */
+.Foto {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* Verzögerung beim erscheinen vom Hover */
+}
+
+.image-container:hover .Foto {
+    transform: scale(1.1); /* Bild beim Hover leicht vergrößern */
+}
+
+/* Die Überlagerung mit Titel und Kameraeinstellungen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(244, 242, 238, 0.5); /* Heller Hintergrund hover*/
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hover-Effekt: Zeigt die Überlagerung */
+.image-container:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Bildname */
+.overlay h3{
+  color:#293056;
+  font-size: 2em;
+  background-color:#f4f2ee;
+}
+
+/* Kameraeinstellungen */
+.kameraeinstellungen {
+    font-size: 1em;
+}
+
+/* Responsiv Galerie*/
+@media (max-width: 600px) {
+  .gallery {
+      grid-template-columns: 1fr; /* 1 Spalte pro Reihe auf Handy */
+  }
+}
+
+
+
+
+/*Konzept und Moodboard*/
+#konzept-box{
+  background-color:#f4f2ee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 25px;
+  margin-bottom: 6%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#moodboard{
+  max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsiv Bild Moodboard*/
+@media (max-width: 600px) {
+  #moodboard {
+    width: 600px;
+    height: auto;
+  }
+}
+
+
+
+
+/*Zeitplan*/
+#zeitplan{
+  max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsiv Bild Zeitplan*/
+@media (max-width: 600px) {
+  #zeitplan {
+    width: 600px;
+    height: auto;
+  }
+}
+
+
+
+
+/*Peacha Kucha*/
+.video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; /*Video wird mittig angezeigt*/
+  min-height: 100%; 
+  flex-direction: column;
+  margin-bottom: 6%;
+}
+
+#reflexion-hkbe{ /*Box mit Schatten*/
+  background-color:#f4f2ee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 25px;
+  margin-bottom: 30px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#reflexion-hkbe img{ /*Screenshot Validator*/
+  max-width: 60%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* Responsiv Pecha Kucha und Bild Validator*/
+@media (max-width: 600px) {
+  .video {
+    width: 400px;
+    height: auto;
+  }
+
+  #reflexion-hkbe img{
+    max-width: 100%;
+  }
+}
+
+
+
+
+/*Lernjournal*/
+.datum{
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.journal-eintrag {
+  background-color:#f4f2ee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 25px;
+  margin-bottom: 30px; /*Abstand zwischen den Boxen */
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+/* Bilder angemessen und responsiv */
+.bild-lernjournal {
+  max-width: 50%; 
+  height: auto;    
+  display: block;  /* ohne Leerraum nter den Bilder */
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+#bild-komposition{ /*Vorher- und Nachherbild der Komprimierung*/
+  display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Abstand zwischen Bildern */
+    justify-content: center;
+    max-width: 75%;
+}
+
+#bild-komposition div { 
+  flex: 1 1 45%; /*wenn das div grösser/kleiner ist, darf das Bild auch grösser/kleiner werden*/
+}
+
+#bild-komposition img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsiv alle Bilder Lernjournal*/
+@media (max-width: 600px) {
+  .bild-lernjournal {
+    max-width: 100%; /*bei kleinem Bildschrim volle breite*/
+  }
+}
+
+
+
+
+/*About*/
+.box-about {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.spalte-about {
+  flex: 1 1 300px;
+  background-color:#f4f2ee;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.spalte-about img { /*Portrait Alena*/
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+h2 { /*Alena Zerla, Credits,..*/
+  margin-top: 0;
+}
+
+.mail{ /*keine Underline beim Link*/
+  text-decoration: none;
+}
+
+.kamera-about {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.kamera {
+  max-width: 180px;
+  text-align: center;
+}
+
+.kamera img {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+
+.kamera figcaption { /*Bildunterschrift*/
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 8%;
+}
+
+.button-about { /*Button zu RAW und Bewertung*/
+  background-color: #00709c;
+  color:#f4f2ee;
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 8%;
+}
+
+.button-about:hover {
+  background-color:#293056;
+}
+
+/*Responsiv Boxen About*/
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column; /*bei Handy untereinander*/
+    align-items: stretch;
+  }
+}
+
+
+
+
+/*Footer*/
+.gestaltungselement{
+  margin-top: 5%;
+  width: 100%;
+  height: 100px; /* Höhe des gestaltungselemts */
+  background-image: url(../fotos/Gestaltungselement_final.png);
+  background-repeat: repeat-x; /* horizontal wiederholen */
+  background-size: 50px auto; /* Breite 30px, Höhe proportional */
+  background-position: top left; /* start oben links */
+}
+
+.footer-box {
+  margin-top: 0;
+  height: 80px;              
+  background-color: #00709c; 
+  display: flex;
+  justify-content: center;    
+  align-items: flex-end; /* text ganz unten */
+  padding-bottom: 20px;       
+  text-align: center;
+}
+
+.footer-box p{ /*Schrift in Footer*/
+  color: #f4f2ee;
+  background-color: #00709c;
+}
+
+
+.email-link { /*Verlinkung E-Mail*/
+  text-decoration: none;
+  font-size: 18px;
+  color: #f4f2ee;
+  background-color: #00709c;
+  transition: color 0.3s;
+}
+
+
+
+

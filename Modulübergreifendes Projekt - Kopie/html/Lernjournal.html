@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Subsite mit Lernjournal, wo gelerntes dokumentiert wurde">
+    <meta name="keywords" content="Lernjournal, Dokumatetion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernjournal</title>
+    <link rel="stylesheet" href="..//style/Style.css">
+</head>
+
+<header class="header"> <!-- Logo und Titel -->
+  <div class="logo-title">
+    <a href="../html/Startseite.html">
+      <img src="../fotos/Logo.svg" class="logo" alt="Logo">
+    </a>
+    <h1 class="title">Blau im F<span class="blau">o</span>kus</h1>
+  </div>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle"> <!--Umschalt/wechsel von ein- zu ausklappen-->
+  <label for="nav-toggle" class="burger" aria-label="Menü öffnen">
+    <span></span> <!--3 Burger Striche-->
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="nav"> <!--Verlinkung zu Subsites-->
+    <ul>
+      <li><a href="../html/Startseite.html">Fotogalerie</a></li>
+      <li><a href="../html/KonzeptUndMoodboard.html">Konzept & Moodboard</a></li>
+      <li><a href="../html/Zeitplan.html">Zeitplan</a></li>
+      <li><a href="../html/Pecha-Kucha-Präsentation.html">Pecha Kucha</a></li>
+      <li><a id="aktuell" href="../html/Lernjournal.html">Lernjournal</a></li>
+      <li><a href="../html/About.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Lernjournal</h1>
+  <div class="journal-eintrag">
+    <h2 class="datum">14.01.2025</h2> <!--Einzelner Eintrag-->
+    <b>Bildsensor</b> <!--b macht Text dick-->
+    <p>Der Sensor ist das Herzstück jeder Digitalkamera. Er besteht in diesem Fall aus circa zwei Millionen Pixeln, die besonders lichtempfindlich sind. Jedes Pixel nimmt Licht auf und misst die Anteile der drei Grundfarben (Rot, Grün, Blau). Diese Farbinformationen werden vom Sensor an den Hauptprozessor weitergeleitet und in digitale Werte (0 und 1) umgewandelt. Anschliessend werden diese Daten auf der Speicherkarte gesichert.</p>
+    <br><p>Beim Betrachten des Bildes auf einem Bildschirm läuft dieser Prozess rückwärts: Die Daten werden vom Prozessor des Monitors gelesen und in elektrische Spannungen umgewandelt. Diese steuern wiederum die Pixel auf dem Monitor, die ebenfalls aus drei Subpixeln (RGB) bestehen. So entsteht auf dem Bildschirm das gespeicherte Bild.</p>
+    <!--br macht Zeilenumbruch-->
+    <br><b>Objektiv</b>
+    <p>Das Objektiv erfüllt mehrere wichtige Funktionen: Es bündelt das Licht, reguliert die Schärfe (Fokus), die Helligkeit (Blende) und den Bildausschnitt (Brennweite). Ohne Objektiv wäre die Kamera "blind", da das Licht gleichmässig auf den Sensor träfe es gäbe also kein scharfes Bild.</p>
+    <br><p>Durch bewegliche Linsen kann das Licht gezielt gebündelt werden je nachdem, ob der Fokus im Vorder- oder Hintergrund liegt. Dieser Vorgang wird Fokussieren genannt. Die im Objektiv eingebaute Blende steuert zusätzlich, wie viel Licht auf den Sensor fällt. Eine geöffnete Blende lässt mehr Licht durch, eine geschlossene weniger. So wird eine Über oder Unterbelichtung vermieden.</p>
+    <br><p>Objektive unterscheiden sich auch in ihrer Brennweite. Zoomobjektive haben eine variable Brennweite, während Festbrennweiten fix sind. Eine kurze Brennweite ermöglicht einen grossen Bildausschnitt (Weitwinkel), eine lange Brennweite einen kleinen (Teleobjektiv). Je nach Brennweite verändert sich auch die Tiefenschärfe.</p>
+    
+    <br><b>Blende</b>
+    <br><p>Die Blende bestimmt, wie viel Licht auf den Sensor trifft. Sie wird mit f-Werten angegeben (z. B. f/1.8, f/4, f/22). Ein kleiner f-Wert bedeutet eine grosse Blendenöffnung (viel Licht), ein hoher f-Wert eine kleine Öffnung (wenig Licht). Jede Blendenstufe halbiert beziehungsweise verdoppelt die Lichtmenge.</p>
+    <br><p>Neben der Belichtung beeinflusst die Blende auch die Tiefenschärfe: Eine offene Blende (z. B. f/2) erzeugt einen unscharfen Hintergrund, eine geschlossene Blende (z. B. f/16) sorgt dafür, dass Vorder und Hintergrund scharf abgebildet werden.</p>
+     
+    <br><b>Brennweite (Zoom)</b>
+    <p>Die Brennweite beschreibt den Abstand zwischen dem optischen Zentrum des Objektivs und dem Sensor. Sie beeinflusst den Bildausschnitt und die Bildwirkung.</p>
+    <br><ul>
+      <li>Normbrennweite (circa 50 mm): Entspricht etwa dem menschlichen Blickfeld.</li>
+      <li>Weitwinkel (unter 50 mm): Grosser Bildausschnitt für Landschaften und Architektur.</li>
+      <li>Teleobjektiv (über 50 mm): Kleiner Bildausschnitt, dafür grössere Abbildung des Motivs für Porträts oder entfernte Objekte.</li>
+    </ul>
+    <br><p>Je länger die Brennweite, desto geringer die Tiefenschärfe. Weitwinkelobjektive zeigen meistens Vorder- und Hintergrund scharf, Teleobjektive eher nur den Fokusbereich.</p>
+    
+    <br><b>Verschlusszeit / Shutter Speed</b>
+    <p>Die Verschlusszeit bestimmt, wie lange Licht auf den Sensor trifft. Kurze Verschlusszeiten "frieren" Bewegungen ein, lange Verschlusszeiten führen zu Bewegungsunschärfe.</p>
+      
+    <br><b>ISO-Wert</b>
+    <p>Der ISO-Wert gibt an, wie lichtempfindlich der Sensor ist. Ein niedriger ISO-Wert (z. B. ISO 100) liefert die beste Bildqualität, benötigt aber viel Licht. Höhere Werte (z. B. ISO 1600) ermöglichen Aufnahmen bei wenig Licht, führen aber zu Bildrauschen vor allem in dunklen Bildbereichen.
+        Die Faustregel: ISO so niedrig wie möglich, nur bei Bedarf erhöhen.</p>
+      
+    <br><b>Belichtungsdreieck</b>
+    <p>Die Belichtung eines Bildes wird durch drei Faktoren bestimmt: Blende, Verschlusszeit und ISO-Wert. Diese drei beeinflussen sich gegenseitig verändert man einen Wert, muss mindestens einer der anderen angepasst werden, um die Belichtung konstant zu halten. Dieses Zusammenspiel nennt man Belichtungsdreieck.</p>
+     
+    <br><b>Weissabgleich</b>
+    <p>Der Weissabgleich sorgt dafür, dass Farben natürlich wiedergegeben werden, unabhängig von der Lichtquelle. Licht hat eine Farbtemperatur (in Kelvin): Morgens oder bei Kerzenlicht wirkt es warm/orange, mittags oder bei bedecktem Himmel eher kühl/bläulich.</p>
+    <br><p>Die Kamera erkennt das dominierende Licht und passt die Farbwiedergabe an. Wird der Weissabgleich manuell "falsch" eingestellt, kann dies gezielt zur Bildgestaltung genutzt werden z. B. für wärmere oder kühlere Farbstimmungen.</p>
+
+    <br><b>Crop-Faktor</b>
+    <p>Der Crop-Faktor beschreibt, wie stark der Bildausschnitt einer Kamera vom Vollformat abweicht. Eine Kamera mit kleinerem Sensor (z. B. APS-C) "beschneidet" das Bild im Vergleich zum Vollformat. Dadurch wirkt es, als wäre die Brennweite länger.</p>
+    <br><p>Beispiel: Ein 50-mm-Objektiv mit einem Crop-Faktor von 1,5 wirkt wie ein 75-mm-Objektiv. Der Bildausschnitt wird kleiner, das Motiv erscheint näher. Der Crop-Faktor verändert jedoch nicht die Schärfentiefe, nur den Bildausschnitt.</p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">21.01.2025</h2>
+    <p>Heute habe ich den Unterschied vom manuellen Kameramodus zum automatischen Kameramodus kennengelernt. Mit Leo zusammen ging ich mit der Kamera Vergleichsfotos schiessen. Zuerst machten wir uns mit den Einstellungen vertraut, da die Einstellungen bei jeder Kamera an einem anderen Ort sind. Besonders das Einstellen der einzelnen Werte im manuellen Modus war nicht ganz einfach. Wir fotografierten im Anschluss zweimal das gleiche Objekt im manuellen sowie im automatischen Modus. Der Unterschied war gut zu erkennen, besonders in der Helligkeit. </p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">28.01.2025</h2>
+    <p>Am heutigen Tag hatten wir eine Vertiefung zum Thema Leuchten. Wir lernten verschiedene Lichtformer, Softboxen und Belichtungsvarianten (z.B. Dreipunktbelichtung) kennen. Ebenfalls konnten wir selber ein Belichtungs-Setup aufstellen, was sehr spannend war. Bei einer zusätzlichen Übung auf Campus mussten wir eine Beleuchtungsskizze machen. Dort definierten wir, woher das Licht jeweils kommt, anhand des Objektes. Dies war gar nicht so einfach, da man die Lichtquellen genau erkennen musste.</p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">18.02.2025</h2>
+    <p>In der heutigen Doppellektion konnte ich den Aufbau der Leuchte wiederholen und weiss nun auch, wie ich die Leuchte auf das Stativ setze. In der Gruppe fotografierten wir ein Objekt dreimal und veränderten jedes Mal die Kameraeinstellungen manuell. Ich lernte, dass die Tiefenschärfe mit der Blende verändert werden kann. Ebenfalls war es spannend zu sehen, dass mit der Leuchte ein deutlich besseres Foto entsteht, im Vergleich zu den anderen Gruppen, die mit anderen Lichtquellen arbeiteten. Ich habe zum ersten Mal mit der grösseren Kamera der Schule fotografiert und weiss nun, wo ich dort die Blende, den ISO-Wert und die Verschlusszeit einstellen kann. </p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">25.02.2025</h2>
+    <p>Heute nahmen wir die Nachbearbeitung genauer unter die Lupe. Im ÜK arbeitete ich mit Adobe Lightroom Classic und nutzte für die Übung im Unterricht die Möglichkeit, um Adobe Lightroom besser kennenzulernen. Im Programm konzentrierten wir uns auf Licht und Farbe und probierten diverses aus mit vorgegebenen Rohdateien. Nachdem ich nun mit beiden Programmen gearbeitet habe, kann ich sagen, dass ich Lightroom besser finde. Es ist intuitiver aufgebaut und das Layout passt mir besser. Ich habe gelernt, dass mit der Nachbearbeitung noch sehr viel verändert werden kann. Mit Filtern, Effekten oder Retuschieren der Fotos können diese optimiert und nach meinen Wünschen verändert werden. Zuletzt lernten wir noch verschiedene Rohdatenformate kennen. Je nach Kamera haben die Fotos einen anderen Formatnamen.</p>
+    <br><b>Beispiele:</b>
+    <ul>
+      <li>Sony: .ARW</li>
+      <li>Canon: .CR2 / .CR3</li>
+      <li>Fujifilm: .RAF</li>
+      <li>Leica: .DNG</li>
+      <li>Nikon: .NEF</li>
+    </ul>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">11.03.2025</h2>
+    <p>Wir bekamen zum Start eine Einführung zum Einblickstag, welcher in zwei Wochen stattfindet. Zur Vorbereitung konnten wir ein Filmplakat gestalten. Hierbei konnte ich das Einstellen der Kamera üben. Ich hatte zum Start etwas Mühe mit dem Licht. Julia und ich suchten deshalb einen Ort mit mehr Tageslicht. Daraufhin wurde das Bild in Photoshop hochgeladen und zu einem Filmplakat bearbeitet. Mit Photoshop habe ich noch nicht so oft gearbeitet. Ich lernte, wie ich eine Maske erstellen kann, mit dem Entfernen-Tool Objekte vom Hintergrund entferne und mit dem generativen Füllen Muster weiterführen kann. Zum Schluss habe ich mein Porträt in die Ebene vor das Plakat gesetzt, um mich mehr oder weniger realistisch zu platzieren.</p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">18.03.2025</h2>
+    <p>In der ersten Lektion hatten wir die Prüfung über die Grundlagen der Fotografie. In der zweiten konnten wir dann noch an unserem Konzept, Zeitplan und Moodboard arbeiten. Den Zeitplan hatte ich bisher in einer sehr simplen Tabelle. Ich fand dies jedoch nicht übersichtlich genug und wechselte auf eine Tabelle, die ich mit genaueren Arbeitsschritten ausfüllen kann. Ebenfalls kann ich den aktuellen Status (Erledigt, in Bearbeitung,…), das Fälligkeitsdatum (Meilenstein) und die Produktionsphase eintragen. Diese Tabelle habe ich dann mit einer Zeitleiste verknüpft und habe so einen sehr guten Überblick über Aufgaben und Meilensteine.</p>
+    <img src="../fotos/Lernjournal/Zeitplan_Lernjournal.jpg" alt="Screenshot Zeitplan" class="bild-lernjournal">
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">25.03.2025</h2>
+    <p>In der ersten Lektion vertieften wir das Thema Licht. Ich lernte, dass es verschiedene Theorien zum Licht gibt. Einige Theorien besagen, dass Licht in Wellen vorkommt. Hingegen das Licht in anderen Theorien als Teilchen existiert. Ebenso gingen wir der Frage auf die Spur “Warum kann ich um die Ecken hören, aber nicht sehen?”. Dies lässt sich so erklären: Schallwellen sind im Vergleich zu Lichtwellen (elektromagnetische Wellen) deutlich grösser. Sie können sich so um Gegenstände herum im Raum ausbreiten und sich verteilen. Lichtwellen sind hingegen viel kleiner und somit ist auch der Abstand zwischen den Wellen kleiner. Dies führt dazu, dass sich die Lichtwellen nicht um die Ecke verbreiten können. Sie sind im Grössenverhältnis zu klein.</p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">27.03.2025</h2>
+    <p>Heute startete ich mit dem Fotografieren. Eigentlich war die Session eine Woche später geplant, jedoch war das Wetter gerade optimal und ich hatte genügend Zeit. Das Foto am Bahnhof stand heute auf der Liste. Das Material, mein Model und die Umgabung haben super gepasst. Wir konnten ganz aussen am Perron shooten und hatten keinerlei Probleme. Als ich nach dem Shooten alle Fotos auf die Cloud ziehen wollte, bemerkte ich, dass ich vergass RAW in der Kamera einzustellen. Dies ärgerte mich sehr. Ich wusste, dass ich die Bilder erneut machen muss und konnte zum Glück auch mein Model, Medes, motovieren, noch einmal zu gehen. Dies war ein grosses Learning für mich und denke, dass es mir so schell nicht mehr passieren wird.</p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">1.04.2025</h2>
+    <p>In der ersten Lektion lernten wir die Bildkompositionen kennen. Dies sind die Einstellungsgrössen in der Fotografie und werden eingesetzt, um ein Foto bewusst zu gestalten. Je nach Einstellungsgrösse kann die Wirkung des Bildes bewusst beeinflusst werden. Einige Begriffe waren mir schon bekannt, da wir dies im ÜK schon hatten. Trotzdem ist vieles schon wieder in Vergessenheit geraten. Was zudem neu war für mich, war die Detail-Aufnahme. Sie stellt Objekte mit einem engen und kleinen Bildausschnitt dar, um Details in den Fokus zu bringen. Mit dieser Komposition können Spannung und Emotionen erzeugt werden. Ebenfalls neu für mich war die Supertotale. Bei dieser Einstellungsgrösse ist die Umgebung zentral und dominierend. Es wird ein Gesamtüberblick über die Szene verschafft und Personen werden klein dargestellt.</p>
+    <img src="../fotos/Lernjournal/Bildkomposition.png" alt="Darstellung Bildkompositionen" class="bild-lernjournal">
+  </div>
+ 
+  <div class="journal-eintrag">
+    <h2 class="datum">8.04.2025</h2>
+    <p>Zum Start der Lektion gab uns Rémy einige Tipps mit, die uns beim Fotografieren helfen können:</p>
+    <ol>
+      <li>Zeit nehmen</li>
+      <li>Probefotos machen</li>
+      <li>Technische Grundlagen nutzen (mit manuellen Einstellungen arbeiten)</li>
+      <li>Referenzfotos im Internet suchen, eine klare Vorstellung des Fotos haben</li>
+      <li>Tiefenunschärfe nutzen (Bokeh-Effekt)</li>
+      <li>Zusätzliche Elemente nutzen</li>
+      <li>Framing/Positionierung (bewusst einsetzen)</li>
+      <li>ND-Filter nutzen (Sonnenbrille für Linse, besonders bei sonnigen Tagen)</li>
+      <li>Mist-Filter</li>
+      <li>Lichtverhältnisse beachten (Woher kommt das Licht? Wie hell ist es?)</li>
+    </ol>
+    <p>Im Verlauf der Lektion lernte ich zudem das diagonale Framing kennen. Hierbei werden Linien und Strukturen diagonal positioniert. So kann Dynamik und Bewegung erzeugt werden.</p>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">29.04.2025</h2>
+    <b>Bittiefe</b>
+    <p>Die Bittiefe gibt an, wie viele Abstufungen pro Farb- oder Tonwert gespeichert werden können. In der Bildverarbeitung bestimmt sie, wie fein Farbübergänge dargestellt werden.</p>
+    <img src="../fotos/Lernjournal/Bittiefe.png" alt="Bittiefe" class="bild-lernjournal">
+    <b>Komprimierung</b>
+    <p>Das originale Bild hat eine Bittiefe von 8 Bits (Standard). Nach dem Komprimieren ist die Bittiefe tiefer. Im Vergleich zum obigen Schema wird sie zwischen 4 und 7 Bit liegen. Dies ist anhand der Gesamtschärfe des Bildes zu erkennen. Ebenfalls ist am Himmel eine Farbabstufung ersichtlich.</p>
+    <br><div id="bild-komposition">
+      <div>
+        <p>Vorher: 14.1 MB</p>
+        <img src="../fotos/Lernjournal/Komposition_vorher.jpeg" alt="Bild vor Komprimierung">
+      </div>
+      <div>
+        <p>Nachher: 530 KB</p>
+        <img src="../fotos/Lernjournal/Komposition_nachher.png" alt="Bild komprimiert">
+      </div>
+    </div>
+    <br><b>Vor- und Nachteile der Komprimierung</b>
+    <br><p>Vorteile</p>
+    <ul>
+      <li>Weniger Speicherplatz nötig </li>
+      <li>Schnelleres Hoch- und Herunterladen</li>
+      <li>Schnellere Ladezeit auf Websites</li>
+    </ul>
+
+    <br><p>Nachteile</p>
+    <ul>
+      <li>Qualitätsverlust</li>
+      <li>Kompatibilitätsprobleme (komische Komprimierungsformate)</li>
+      <li>Wiederholtes Speichern verschlechtert die Qualität</li>
+    </ul>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">6.05.2025</h2>
+    <p>In der heutigen Lektion vertieften wir die Bildformate JPEG, RAW, TIFF, PNG und HEIC. Die wichtigsten Informationen fasste ich zusammen. Vieles war mir schon bekannt, jedoch lernte ich auch einige Fakten dazu.</p>
+    <br><ul>
+      <li>Eine RAW-Datei ist kein direkt sichtbares Bild, sondern enthält nur Rohdaten vom Kamerasensor. Es braucht spezielle Softwares (z. B. Lightroom oder Photoshop), um daraus ein sichtbares Bild zu entwickeln.</li>
+      <li>Das HEIC-Format, das z.B. iPhones verwenden, komprimiert Bilder effizienter als JPEG und dies ohne sichtbaren Qualitätsverlust. Dadurch passt auf ein Handy doppelt so viel Bildmaterial.</li>
+      <li>Eine TIFF-Datei kann wie ein kleines Bild-„PDF“ funktionieren. Es hat mehrere Seiten oder Ebenen. Das wird oft in der Druckvorstufe oder Archivierung verwendet.</li>
+    </ul>
+  </div>
+
+  <div class="journal-eintrag">
+    <h2 class="datum">20.05.2025</h2>
+    <p>Rund um das Thema Urheberrecht ging es in der heutigen Doppelstunde. Urheberrecht ist für den Schutz von kreativen Werken. Dazu zählen Fotos, Texte, Musik und Videos. Diese Werke gehören immer an dieser Person, die das Werk erstellt/geschaffen hat. Diese Person darf dem zu folge auch entscheiden, ob es veröffentlicht wird und ob man es bearbeiten und weiterverwenden darf oder nicht.</p>
+    <br><b>Rechte als Urheber:in </b>
+    <br><ul>
+      <li>Über die Veröffentlichung ihres Werks zu bestimmen</li>
+      <li>Namentlich genannt zu werden</li>
+      <li>Bearbeitungen verbieten</li>
+      <li>Eine Vergütung für die Nutzung zu verlangen</li>
+    </ul>
+
+    <br><b>Nutzungsrechte und Lizenzen</b>
+    <p>Falls eine Person das Werk von jemand anderem nutzen möchte, braucht es eine Erlaubnis des/der des/Urheber:in. Eine bekannte Möglichkeit ist die Nutzung von Creative Commons (CC). Hiermit kann der Künstler die Nutzung definieren. Die Lizenzen können divers und nach Wunsch kombiniert werden:</p>
+    <br><ul>
+      <li>CC0 (Zero): Das Werk ist gemeinfrei. Es darf ohne Einschränkung kopiert, verändert, verbreitet und genutzt werden.</li>
+      <li>BY (Namensnennung): Das Werk darf genutzt werden, aber der Name des Urhebers muss genannt werden.</li>
+      <li>NC (Non-Commercial): Das Werk darf nicht für kommerzielle Zwecke genutzt werden.</li>
+      <li>ND (No Derivatives): Das Werk darf nicht bearbeitet oder verändert werden.</li>
+      <li>SA (Share Alike): Abgeleitete Werke müssen unter derselben Lizenz weitergegeben werden wie das Original.</li>
+    </ul>
+
+    <br><b>Urheberrechtsverletzung</b>
+    <p>Ohne entsprechende Erlaubnis liegt eine Urheberrechtsverletzung vor. Diese kann rechtliche Folgen haben (Abmahnung, Geldstrafe, Löschung des Inhalts)</p>
+    
+    <br><b>Datenschutz und Recht am eigenen Bild</b>
+    <p>Auch als Person hinter der Kamera muss beachtete werden, dass falls eine Person abgebildet wird, diese damit einverstanden ist. Sie hat das Recht am eigenen Bild. In diesen Fällen ist eine Einwilligung nötig:</p>
+    <br><ul>
+      <li>Bei erkennbaren Einzelpersonen: Ja</li>
+      <li>Bei Gruppenbildern: Ja, wenn Gesichter deutlich zu erkennen sind</li>
+      <li>Bei Veranstaltungen: Meistens ja</li>
+      <li>Bei Kindern: Zustimmung der Eltern erforderlich</li>
+    </ul>
+    <br><p>Die Einwilligung kann mündlich oder schriftlich erfolgen. Die schriftliche Variante ist jedoch sicherer.</p>
+  </div>
+</main>
+
+
+
+
+
+<footer>
+  <div class="gestaltungselement"></div> <!--6-Eck-->
+
+  <div class="footer-box">
+      <p>&copy; 2025 Alena Zerla | E-Mail:</p> <!--Link, damit Mail direkt geöffnet wird-->
+      <a href="mailto:alena.zerla@roche.com" class="email-link" aria-label="E-Mail schreiben">
+          ✉️
+      </a>
+  </div>
+</footer>
+
+
